@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete course</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'courses/show.css'%}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<div id="main_content">
+		<h2>Are you sure you want to delete the following course?</h2>
+		<ul>
+		<li><p>Name: {{course.name}}</p></li>
+		<li><p>Description: {{course.description}}</p></li>
+		</ul>
+
+		<a href="/"><button id="no" type="submit" value= "submit">No</button></a>
+
+		<a href="/delete/{{course.id}}"><button>Yes! I want to delete this</button></a>
+
+	</div>
+</body>
+</html>
